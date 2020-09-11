@@ -14,6 +14,14 @@ def main() -> None:
     web.run_app(app)
 
 
+async def get_async_application() -> web.Application:
+    """Return async application instance."""
+
+    app = await init_app()
+
+    return app
+
+
 async def init_app() -> web.Application:
     """
     Initiate application and setup it.
